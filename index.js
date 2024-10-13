@@ -1,22 +1,36 @@
-// counter program
+//number guessing game
 
-const decreaseBtn = document.getElementById("decreaseBtn");
-const resetBtn = document.getElementById("resetBtn");
-const increaseBtn = document.getElementById("increaseBtn");
-const count_label= document.getElementById("count_label");
-let count =0;
+const min = 1;
+const max = 100;
+const answer = Math.floor(Math.random() *(max-min+1));
 
-increaseBtn.onclick = function(){
-    count++;
-    count_label.textContent = count;
-}
+console.log(answer)
 
-decreaseBtn.onclick = function(){
-    count--;
-    count_label.textContent = count;
-}
+let attempts= 0
+let guess;
+let running = true;
 
-resetBtn.onclick = function(){
-    count=0;
-    count_label.textContent = count;
+while (running){
+    guess = window.prompt(`guess a number between ${min} - ${max}`);
+    guess = Number(guess);
+    attempts++;
+    if(isNaN(guess)){
+        window.alert("please enter a valid number");
+    }
+    else if(guess < min || guess > max){
+        window.alert(`enter a valid number between ${min}-${max}`)
+    }
+    else{
+        attempts++;
+        if(guess < answer){
+            window.alert("the number id low");
+        }
+        else if(guess > answer){
+            window.alert("the number is high");
+        }
+        else{
+            window.alert(`the guess is correct , you had ${attempts} attempts`);
+            running=false;
+        }
+    }
 }
