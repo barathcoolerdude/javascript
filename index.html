@@ -4,19 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <form>
-    <h1 class="h1">temperature conversion:</h1>
-    <input type="number" id="textBox" value="0"><br><br>
-    
-    <input type="radio" id="tofahrenheit" name="unit">
-    <label for="tofahrenheit">Celious ➡️ Fahrenheit</label><br>
+        <h1>temperature converter</h1>
+        <input type="number" id="textBox" value="0"><br>
 
-    <input type="radio" id="toCelcious" name="unit">
-    <label for="toCelcious">Fahrenheit ➡️ Celious</label><br>
+        <input type="radio" id="toFahrenheit" name="unit">
+        <label for="toFahrenheit">Celcious to Fahrenheit</label><br>
+
+        <input type="radio" id="toCelcious" name="unit">
+        <label for="toCelcious">Fahrenheit to Celcious</label><br>
+
+        <button type="button" onclick="convert()">convert</button>
+        <p id="result"></p>
 
     </form>
-    <script src="index.js"></script>
+    <script src="index.js"></script>    
 </body>
 </html>
+
+
+
+
+
