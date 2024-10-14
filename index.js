@@ -3,20 +3,29 @@ const result = document.getElementById("result");
 const toFahrenheit = document.getElementById("toFahrenheit");
 const toCelcious = document.getElementById("toCelcious");
 
-let temp=0;
+let temp;
 function convert(){
 
     if(toFahrenheit.checked){
         temp=Number(textBox.value);
-        temp = (textBox*9/5) + 32;
-        return;
+        temp = (temp*9/5) + 32;
+        result.textContent = temp.toFixed(2)+"F"
     }
     else if(toCelcious){
         temp=Number(textBox.value);
-        temp = (textBox-32) * 5/9;
-        result.textContent=temp.toFixed(2);
+        temp = (temp-32) * 5/9;
+        result.textContent=temp.toFixed(2)+"C";
     }
     else{
         result.textContent = "please select a unit";
     }
 }
+
+
+
+
+
+
+
+
+
