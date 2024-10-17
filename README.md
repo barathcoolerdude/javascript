@@ -1,5 +1,3 @@
 # javascript_tuto
 
-# clock program
-
-``` A live clock  ``` 
+# random number generator

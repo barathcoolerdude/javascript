@@ -3,16 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>clock</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Random Number Generator</title>
+    <link rel="stylesheet" href="style.css"> 
 </head>
 <body>
-    <div id="clockContainer">
-        <div id="clock">00:00:00 </div>
-    </div>
-    <script src="index.js"></script>    
+    
+    <h1>random number generator:</h1>
+
+    <form>
+        <p> select the cretiria</p>
+
+        <input type="number" value="1" min="1" id="length">
+        <label for="text"></label><br>
+
+        <input type="checkbox" id="upperCase">
+        <label for="upperCase">uppercase</label><br>
+
+        <input type="checkbox" id="lowerCase">
+        <label for="lowerCase">lowerCase</label><br>
+
+        <input type="checkbox" id="numbers">
+        <label for="numbers">numbers</label><br>
+
+        <input type="checkbox" id="symbols">
+        <label for="symbols">symbols</label><br>
+
+        
+    </form>
+    <button id="submit" onclick="generatePassword(10)">submit</button><br>
+
+        <p id="result">result</p>
+
+    <script src="index.js"></script>
 </body>
 </html>
-
-
-
