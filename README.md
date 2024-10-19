@@ -1,3 +1,3 @@
 # javascript_tuto
 
-# stop watch
+# calculator

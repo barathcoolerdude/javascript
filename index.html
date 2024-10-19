@@ -7,20 +7,38 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Stopwatch</h1>
+    <h1> Calculator</h1>
 
-    <div id="container">
-        <div id="display">
-            00:00:00:00
+<form>
+
+    <input type="radio" id="addition" name="calculation">
+    <label for="addition">addition</label>
+
+    <input type="radio" id="subtraction" name="calculation">
+    <label for="subtraction">subtraction</label>
+
+    <input type="radio" id="multiplication" name="calculation">
+    <label for="multiplication">multiplication</label>
+
+    <input type="radio" id="division" name="calculation">
+    <label for="division">division</label>
+
+    <input type="radio" id="power" name="power">
+    <label for="power">power</label>
+
+    <input type="radio" id="root" name="root">
+    <label for="root">root</label><br><br>
+
+    <div>
+        <input type="display" id="display">
     </div>
-    <div id="controls">
-            <button type="button" id="start" onclick="start()">Start</button>
-            <button type="button" id="stop" onclick="stop()">Pause</button>
-            <button type="button" id="reset" onclick="reset()">Reset</button>
-    </div>
-        
-    </div>
+</form><br>
+
+<button type="submit" oncick="calculator()">calculate</button>
+
+
     <script src="index.js"></script>
+
 </body>
 </html>
 
