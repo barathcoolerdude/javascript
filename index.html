@@ -3,37 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Random Number Generator</title>
-    <link rel="stylesheet" href="style.css"> 
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-    <h1>random number generator:</h1>
+    <h1>Stopwatch</h1>
 
-    <form>
-        <p> select the cretiria</p>
-
-        <input type="number" value="1" min="1" id="length">
-        <label for="text"></label><br>
-
-        <input type="checkbox" id="upperCase">
-        <label for="upperCase">uppercase</label><br>
-
-        <input type="checkbox" id="lowerCase">
-        <label for="lowerCase">lowerCase</label><br>
-
-        <input type="checkbox" id="numbers">
-        <label for="numbers">numbers</label><br>
-
-        <input type="checkbox" id="symbols">
-        <label for="symbols">symbols</label><br>
-
+    <div id="container">
+        <div id="display">
+            00:00:00:00
+    </div>
+    <div id="controls">
+            <button type="button" id="start" onclick="start()">Start</button>
+            <button type="button" id="pause" onclick="pause()">Pause</button>
+            <button type="button" id="reset" onclick="reset()">Reset</button>
+    </div>
         
-    </form>
-    <button id="submit" onclick="generatePassword(10)">submit</button><br>
-
-        <p id="result">result</p>
-
+    </div>
     <script src="index.js"></script>
 </body>
 </html>
+
+
