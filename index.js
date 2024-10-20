@@ -1,40 +1,61 @@
-let elapsedTime = 0;
-let isRunning = false;
-let startTime = 0;
+let count = "";
+let operator = "";
+let equation= [];
+let digits = [];
+let j=0;
+function calculate(){
+    const input = document.getElementById("input").value;
+    console.log(input);
 
-
-function start(){
-    if(!isRunning){
-        startTime = Date.now() - elapsedTime;
-        timer = setInterval(update , 10);
-        isRunning = true;
+    for(let i = 0; i <= input.length; i++){
+        const isnumber = input.charAt(i);
+        if (/[0-9]/.test(isnumber)){
+            count += isnumber;
+            console.log(count);
+            continue;
+        }
+        else{
+            if(isnumber == "+"){
+                operator = "+";
+                console.log("it is add");
+            }
+            else if(isnumber == "-"){
+                operator = "-";
+            }
+            else if(isnumber == "*"){
+                operator = "*";
+            }
+            else if(isnumber == "/"){
+                operator = "/";
+            }
+            else{
+                console.log("Enter a valid operation");
+                console.log(isnumber);
+            }
+        }
+            digits[j]= count;
+            console.log(count);
+            count = "";
+            j++;
     }
-}
+    console.log(`digits are ${digits}`)
 
-function stop(){
-    clearInterval(timer);
-    isRunning = false;
-}
-
-function reset(){
-    display.textContent = `00:00:00:00`;
-    isRunning = false;
-
-}
-
-function update(){
-    const currentTime = Date.now();
-    elapsedTime = currentTime - startTime;
-    
-    let hours =Math.floor(elapsedTime / (1000 * 60 * 60));
-    let minutes =Math.floor( elapsedTime / (1000 * 60) % 60);
-    let seconds = Math.floor(elapsedTime / 1000 % 60);
-    let milisecond = Math.floor(elapsedTime % 1000 / 10);
-
-    hours = String(hours).padStart(2 , "0");
-    minutes = String(minutes).padStart(2 , "0");
-    seconds = String(seconds).padStart(2 , "0");
-    milisecond = String(milisecond).padStart(2 , "0");
-    
-    display.textContent = `${hours}:${minutes}:${seconds}:${milisecond}`
+    for(let k = 0;k < digits.length;k ++){
+        console.log(digits[k]);
+        if(operator == "+"){
+            output.textContent = Number(digits[0])+Number(digits[1]);
+        }
+        else if(operator == "-"){
+            output.textContent = Number(digits[0])-Number(digits[1]);
+        }
+        else if(operator == "*"){
+            output.textContent = Number(digits[0])*Number(digits[1]);
+        }
+        else if(operator == "/"){
+            output.textContent = Number(digits[0])/Number(digits[1]);
+        }
+        else{
+            console.log("this symbol os not found");
+        }
+    }
 }

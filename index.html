@@ -11,32 +11,15 @@
 
 <form>
 
-    <input type="radio" id="addition" name="calculation">
-    <label for="addition">addition</label>
-
-    <input type="radio" id="subtraction" name="calculation">
-    <label for="subtraction">subtraction</label>
-
-    <input type="radio" id="multiplication" name="calculation">
-    <label for="multiplication">multiplication</label>
-
-    <input type="radio" id="division" name="calculation">
-    <label for="division">division</label>
-
-    <input type="radio" id="power" name="power">
-    <label for="power">power</label>
-
-    <input type="radio" id="root" name="root">
-    <label for="root">root</label><br><br>
-
     <div>
-        <input type="display" id="display">
+        <input type="display" id="input" placeholder="Enter the operation here">
     </div>
+
 </form><br>
 
-<button type="submit" oncick="calculator()">calculate</button>
+<button type="submit" onclick="calculate()">calculate</button>
 
-
+<p id="output">output</p>
     <script src="index.js"></script>
 
 </body>
