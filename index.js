@@ -1,9 +1,11 @@
-let count = "";
+;
+function calculate(){
+    let count = "";
 let operator = "";
 let equation= [];
 let digits = [];
-let j=0;
-function calculate(){
+let j=0
+
     const input = document.getElementById("input").value;
     console.log(input);
 
@@ -11,13 +13,11 @@ function calculate(){
         const isnumber = input.charAt(i);
         if (/[0-9]/.test(isnumber)){
             count += isnumber;
-            console.log(count);
             continue;
         }
-        else{
+        else if(operator == "+"||"-"||"*"||"/"){
             if(isnumber == "+"){
                 operator = "+";
-                console.log("it is add");
             }
             else if(isnumber == "-"){
                 operator = "-";
@@ -29,14 +29,14 @@ function calculate(){
                 operator = "/";
             }
             else{
-                console.log("Enter a valid operation");
-                console.log(isnumber);
+                console.log("enter a proper operator");
             }
         }
-            digits[j]= count;
-            console.log(count);
-            count = "";
-            j++;
+        
+        digits[j]= count;
+        console.log(count);
+        count = "";
+        j++;
     }
     console.log(`digits are ${digits}`)
 
